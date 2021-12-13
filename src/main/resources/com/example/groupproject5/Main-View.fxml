@@ -10,7 +10,7 @@
             <children>
                 <Button mnemonicParsing="false" onAction="#handleOpenGameOfThrones" prefHeight="96.0" prefWidth="292.0" text="Open Game of Thrones" />
                 <Button mnemonicParsing="false" onAction="#handleOpenChuckNorris" prefHeight="106.0" prefWidth="293.0" text="Open Chuck Norris" />
-                <Button mnemonicParsing="false" prefHeight="106.0" prefWidth="293.0" text="Open Makeup" />
+                <Button mnemonicParsing="false" onAction="#handleOpenMakeup" prefHeight="106.0" prefWidth="293.0" text="Open Makeup" />
                 <Button mnemonicParsing="false" onAction="#handleClose" prefHeight="103.0" prefWidth="292.0" text="Exit" />
             </children></VBox>
     </children>

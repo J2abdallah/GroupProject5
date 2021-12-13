@@ -48,6 +48,23 @@ public class MainController {
     }
 
     @FXML
+        public void handleOpenMakeup(ActionEvent event){
+        var makeupLoc = new FXMLLoader(MainApplication.class.getResource("MainMakeup.fxml"));
+        Scene makeupScene = null;
+        try {
+            makeupScene = new Scene(makeupLoc.load(),900 , 600);
+        } catch (IOException e) {
+            System.out.println("makeup didnt load");
+            e.printStackTrace();
+        }
+        Stage makeupWindow = new Stage();
+        makeupWindow.setScene(makeupScene);
+        makeupWindow.setTitle("Makeup Window");
+        makeupWindow.show();
+
+    }
+
+    @FXML
     public void handleClose(ActionEvent event){
         System.exit(0);
     }
