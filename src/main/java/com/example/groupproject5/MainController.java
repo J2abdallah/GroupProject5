@@ -21,13 +21,30 @@ public class MainController {
         try{
             secondScene = new Scene(secondLoc.load(), 900, 600);
         }catch (IOException e){
-            System.out.println("Couldn't load second window");
+            System.out.println("Couldn't load Thrones window");
             e.printStackTrace();
         }
         Stage secondWindow = new Stage();
         secondWindow.setScene(secondScene);
         secondWindow.setTitle("See  - here is a second window");
         secondWindow.show();
+    }
+
+    @FXML
+        public void handleOpenChuckNorris(ActionEvent event){
+        var norrisWindow = new FXMLLoader(MainApplication.class.getResource("ChuckNorris.fxml"));
+        Scene norrisScene = null;
+        try {
+            norrisScene = new Scene(norrisWindow.load(),1000,666);
+
+        } catch (IOException e) {
+            System.out.println("norris didnt load");
+            e.printStackTrace();
+        }
+        Stage norrisStage = new Stage();
+        norrisStage.setScene(norrisScene);
+        norrisStage.setTitle("Norris Window");
+        norrisStage.show();
     }
 
     @FXML
