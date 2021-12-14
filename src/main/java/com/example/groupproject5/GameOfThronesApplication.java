@@ -1,3 +1,5 @@
+//Tom Szymczuk
+
 package com.example.groupproject5;
 
 import javafx.application.Application;
@@ -10,7 +12,13 @@ public class GameOfThronesApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(GameOfThronesApplication.class.getResource("MainGameOfThrones.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Scene scene = null;
+        try {
+            scene = new Scene(fxmlLoader.load(),600,400);
+        }
+        catch (IOException e) {
+            System.out.println("Error loading FXML or exception in the controller class.");
+        }
         stage.setTitle("Game of Thrones Book API by Tom Szymczuk");
         stage.setScene(scene);
         stage.show();
