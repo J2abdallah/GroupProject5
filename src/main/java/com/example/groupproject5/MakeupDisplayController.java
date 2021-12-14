@@ -22,7 +22,7 @@ public class MakeupDisplayController implements Initializable {
     @FXML
     private TextField PriceField;
     @FXML
-    private ListView<MakeupDataHandler.MakeupType> ListControl;
+    private ListView<MakeupDataHandler.DataHandler.MakeupDataType> ListControl;
     private MakeupDataHandler Model;
     @FXML
     private void loadData(){
@@ -32,7 +32,8 @@ public class MakeupDisplayController implements Initializable {
 
     private String getQueryParam() {
         var inputDialog = new TextInputDialog(" ");
-        inputDialog.seeContentText();
+        inputDialog.setContentText("");
+        return "";
     }
 
 

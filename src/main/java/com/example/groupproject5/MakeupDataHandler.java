@@ -1,5 +1,7 @@
 package com.example.groupproject5;
 
+import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -9,7 +11,7 @@ import java.util.ArrayList;
 
 public class MakeupDataHandler {
 
-    public class DataHandler {
+    public static class DataHandler {
         private HttpClient dataGrabber;
         private String webLocation;
 
@@ -36,8 +38,8 @@ public class MakeupDataHandler {
                 System.exit(-1);
             }
             var responseBody = response.body();
-            var jsonParser = newGson();
-            var UnivData = jsonParser.fromJson(responseBody, MakeupType[].class);
+            var jsonParser = new Gson();
+            var UnivData = jsonParser.fromJson(responseBody, MakeupDataType[].class);
             return UnivData;
         }
 

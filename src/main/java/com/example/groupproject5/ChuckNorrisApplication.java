@@ -1,4 +1,4 @@
-// James Abdallah
+package com.example.groupproject5;// James Abdallah
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
