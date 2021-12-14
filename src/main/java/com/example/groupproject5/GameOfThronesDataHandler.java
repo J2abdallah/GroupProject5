@@ -25,8 +25,10 @@ public class GameOfThronesDataHandler {
             response = dataGrabber.send(dataRequest, HttpResponse.BodyHandlers.ofString());
         } catch (IOException e) {
             System.out.println("Error Connecting to Network or Site");
+            e.printStackTrace();
         } catch (InterruptedException exception) {
             System.out.println("Lost Connection to Network or Site");
+            exception.printStackTrace();
         }
         if (response == null){
             System.out.println("Unable to get Data From Network....Giving Up");
