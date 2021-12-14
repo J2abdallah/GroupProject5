@@ -25,27 +25,12 @@ public class GameOfThronesDisplayController implements Initializable {
 
     public void loadData(){
         var site = "https://www.anapioficeandfire.com/api/books";
-//        String param = getQueryParam();
-//        var wholeSite = site+param;
         Model = new GameOfThronesDataHandler(site);
         var books = Model.getData();
         ObservableList<GameOfThronesDataHandler.BookDataType> BookList = FXCollections.observableArrayList(books);
         ListControl.setItems(BookList);
 
     }
-
-/*    private String getQueryParam() {
-        var inputDialog = new TextInputDialog("Young");
-        inputDialog.setContentText("What University Should we Search for?");
-        inputDialog.setHeaderText("Gathering Information");
-        var response = inputDialog.showAndWait();
-        if (response.isEmpty()){
-            return "";
-        }
-        else {
-            return response.get();
-        }
-    } */
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
