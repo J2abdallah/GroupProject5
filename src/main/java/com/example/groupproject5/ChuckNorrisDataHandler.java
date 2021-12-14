@@ -12,9 +12,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ChuckNorrisDataHandler {
-    private HttpClient dataGrabber;
+    private final HttpClient dataGrabber;
 
     public ChuckNorrisDataHandler(){
+        dataGrabber = HttpClient.newHttpClient();
 
     }
     public String loadJoke(String jokeCategory){
@@ -44,7 +45,7 @@ public class ChuckNorrisDataHandler {
 
 
     }
-    class jokeDataType{
+    static class jokeDataType{
         ArrayList<String> categories;
         String created_at;
         String icon_url;
